@@ -21,7 +21,7 @@ const ajouteUtilisateur = async (req, res) => {
 };
 const getUtilisateurs = async (req, res) => {
   try {
-    let cursor = client.db().collection("utilisateurs").find({ nom: "zohair" });
+    let cursor = client.db().collection("utilisateurs").find();
 
     let result = await cursor.toArray();
     res.status(200).json(result);
